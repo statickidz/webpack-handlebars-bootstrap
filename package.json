@@ -1,0 +1,66 @@
+{
+  "name": "webpack-handlebars-bootstrap",
+  "version": "1.0.0",
+  "description": "A clean Webpack 3 + Bootstrap 4 + Handlebars frontend template.",
+  "scripts": {
+    "build": "webpack --config webpack-prod.config.js --colors",
+    "dev": "webpack-dev-server --config webpack-dev.config.js --watch --colors"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/statickidz/yet-another-webpack-es6-starterkit.git"
+  },
+  "keywords": [
+    "frontend",
+    "es6",
+    "javascript",
+    "bootstrap",
+    "webpack",
+    "startkit"
+  ],
+  "author": "Adrián Barrio Andrés <statickidz@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/statickidz/webpack-handlebars-bootstrap/issues"
+  },
+  "eslintConfig": {
+    "env": {
+      "browser": true,
+      "node": true
+    },
+    "parserOptions": {
+      "ecmaVersion": 6,
+      "sourceType": "module"
+    },
+    "rules": {
+      "semi": 2
+    }
+  },
+  "homepage": "https://github.com/statickidz/webpack-handlebars-bootstrap#readme",
+  "devDependencies": {
+    "babel-core": "^6.9.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-es2015": "^6.9.0",
+    "browser-sync": "^2.18.13",
+    "browser-sync-webpack-plugin": "^1.2.0",
+    "clean-webpack-plugin": "^0.1.17",
+    "copy-webpack-plugin": "^4.2.0",
+    "css-loader": "^0.28.7",
+    "eslint": "^4.6.1",
+    "eslint-loader": "^1.3.0",
+    "extract-text-webpack-plugin": "^3.0.0",
+    "handlebars": "^4.0.11",
+    "handlebars-loader": "^1.6.0",
+    "html-webpack-plugin": "^2.17.0",
+    "node-sass": "^4.1.1",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.18.2",
+    "webpack": "^3.5.6",
+    "webpack-dev-server": "^2.7.1"
+  },
+  "dependencies": {
+    "bootstrap": "^4.0.0-beta.2",
+    "jquery": "^3.2.1",
+    "popper.js": "^1.12.6"
+  }
+}
