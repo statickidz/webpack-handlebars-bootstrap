@@ -4,7 +4,7 @@
   "description": "A clean Webpack 3 + Bootstrap 4 + Handlebars frontend template.",
   "scripts": {
     "build": "webpack --config webpack-prod.config.js --colors",
-    "dev": "webpack-dev-server --config webpack-dev.config.js --watch --colors"
+    "dev": "webpack-dev-server --config webpack-dev.config.js --watch --colors -d"
   },
   "repository": {
     "type": "git",

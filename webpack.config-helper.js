@@ -113,7 +113,7 @@ module.exports = (options) => {
 
     webpackConfig.module.rules.push({
       test: /\.scss$/i,
-      use: ['style-loader', 'css-loader?sourceMap', 'sass-loader']
+      use: ['style-loader?sourceMap', 'css-loader?sourceMap', 'sass-loader?sourceMap']
     }, {
       test: /\.js$/,
       use: 'eslint-loader',
