@@ -5,7 +5,7 @@ const Webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
-const ExtractSASS = new ExtractTextPlugin('[name].[hash].css');
+const ExtractSASS = new ExtractTextPlugin('./[name].[hash].css');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 const webpack = require('webpack');
@@ -13,15 +13,15 @@ const webpack = require('webpack');
 const pages = require('./src/pages');
 let renderedPages = [];
 for (let i = 0; i < pages.length; i++) {
-	let page = Object.assign({}, pages[i]);
-	renderedPages.push(
-		new HtmlWebpackPlugin({
-			template: page.template,
-			filename: page.output,
-			title: page.content.title,
-			description: page.content.description
-		})
-	);
+  let page = Object.assign({}, pages[i]);
+  renderedPages.push(
+    new HtmlWebpackPlugin({
+      template: page.template,
+      filename: page.output,
+      title: page.content.title,
+      description: page.content.description
+    })
+  );
 }
 
 module.exports = (options) => {
@@ -32,7 +32,7 @@ module.exports = (options) => {
     entry: ['./src/app.js'],
     output: {
       path: dest,
-      filename: '[name].[hash].js'
+      filename: './assets/scripts/[name].[hash].js'
     },
     plugins: [
       new Webpack.ProvidePlugin({
@@ -44,15 +44,11 @@ module.exports = (options) => {
         Popper: ['popper.js', 'default'],
       }),
       new CopyWebpackPlugin([
-        {from:'./src/assets/images', to:'./assets/images'} 
+        {from: './src/assets/images', to: './assets/images'}
       ]),
       new CopyWebpackPlugin([
-        {from:'./src/assets/fonts', to:'./assets/fonts'} 
+        {from: './src/assets/fonts', to: './assets/fonts'}
       ]),
-      new CleanWebpackPlugin(['dist'], {
-        verbose: true,
-        dry: false
-      }),
       new Webpack.DefinePlugin({
         'process.env': {
           NODE_ENV: JSON.stringify(options.isProduction ? 'production' : 'development')
@@ -84,10 +80,18 @@ module.exports = (options) => {
               Path.join(__dirname, 'src', 'pages')
             ]
           }
+        },
+        {
+          test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+          loader: "file-loader?name=./assets/fonts/[name].[ext]"
+        },
+        {
+          test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+          loader: "file-loader?name=./assets/fonts/[name].[ext]"
         }
       ]
     }
-    };
+  };
 
   if (options.isProduction) {
     webpackConfig.entry = ['./src/app.js'];
@@ -98,12 +102,19 @@ module.exports = (options) => {
           warnings: false
         }
       }),
-      ExtractSASS
+      ExtractSASS,
+      new CleanWebpackPlugin(['dist'], {
+        verbose: true,
+        dry: false
+      })
     );
-    
+
     webpackConfig.module.rules.push({
       test: /\.scss$/i,
       use: ExtractSASS.extract(['css-loader', 'sass-loader'])
+    }, {
+      test: /\.css$/i,
+      use: ExtractSASS.extract(['css-loader'])
     });
 
   } else {
@@ -114,6 +125,9 @@ module.exports = (options) => {
     webpackConfig.module.rules.push({
       test: /\.scss$/i,
       use: ['style-loader?sourceMap', 'css-loader?sourceMap', 'sass-loader?sourceMap']
+    }, {
+      test: /\.css$/i,
+      use: ['style-loader', 'css-loader']
     }, {
       test: /\.js$/,
       use: 'eslint-loader',
@@ -141,7 +155,7 @@ module.exports = (options) => {
           match: [
             '**/*.hbs'
           ],
-          fn: function(event, file) {
+          fn: function (event, file) {
             if (event === "change") {
               const bs = require('browser-sync').get('bs-webpack-plugin');
               bs.reload();
@@ -152,7 +166,7 @@ module.exports = (options) => {
         reload: false
       })
     );
-    
+
   }
 
   webpackConfig.plugins = webpackConfig.plugins.concat(renderedPages);

@@ -1,6 +1,6 @@
 const pages = [
   {
-    output: 'index.html',
+    output: './index.html',
     content: {
       title: 'Home',
       description: 'Home Page'
@@ -8,7 +8,7 @@ const pages = [
     template: './src/pages/home.hbs'
   },
   {
-    output: 'about.html',
+    output: './about/index.html',
     content: {
       title: 'About',
       description: 'About Page'
