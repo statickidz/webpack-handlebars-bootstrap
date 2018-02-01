@@ -9,6 +9,8 @@ A clean Webpack, Bootstrap and Handlebars frontend template.
 ### Installation
 
 ```
+git clone https://github.com/statickidz/webpack-handlebars-bootstrap.git your-app-name
+cd your-app-name
 npm install
 ```
 
