@@ -26,6 +26,7 @@ npm run build
 
 ### Features:
 
+* SEO friendly
 * Webpack 3
 * BrowserSync with localtunnel, xip.io, ...
 * Hot Module Replacement

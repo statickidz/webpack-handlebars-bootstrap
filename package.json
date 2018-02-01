@@ -1,6 +1,6 @@
 {
   "name": "webpack-handlebars-bootstrap",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A clean Webpack 3 + Bootstrap 4 + Handlebars frontend template.",
   "scripts": {
     "build": "webpack --config webpack-prod.config.js --colors",
@@ -53,16 +53,16 @@
     "handlebars": "^4.0.11",
     "handlebars-loader": "^1.6.0",
     "html-webpack-plugin": "^2.17.0",
-    "node-sass": "^4.7.1",
+    "node-sass": "^4.7.2",
     "sass-loader": "^6.0.6",
-    "style-loader": "^0.18.2",
+    "style-loader": "^0.20.1",
     "url-loader": "^0.6.2",
-    "webpack": "^3.8.1",
-    "webpack-dev-server": "^2.9.4"
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.11.1"
   },
   "dependencies": {
-    "bootstrap": "^4.0.0-beta.2",
+    "bootstrap": "^4.0.0",
     "jquery": "^3.2.1",
-    "popper.js": "^1.12.6"
+    "popper.js": "^1.12.9"
   }
 }
