@@ -2,7 +2,7 @@
   <img src="https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square" alt="License" />
 </a>
 
-# Webpack 3 + Bootstrap 4 + Handlebars
+# Webpack 4 + Bootstrap 4 + Handlebars
 
 A clean Webpack, Bootstrap and Handlebars frontend template.
 
@@ -11,25 +11,26 @@ A clean Webpack, Bootstrap and Handlebars frontend template.
 ```
 git clone https://github.com/statickidz/webpack-handlebars-bootstrap.git your-app-name
 cd your-app-name
-npm install
+yarn install
 ```
 
 ### BrowserSync Server
 
 ```
-npm run dev
+yarn dev
 ```
 
 ### Build Production
 
 ```
-npm run build
+yarn build
 ```
 
 ### Features:
 
 * SEO friendly
-* Webpack 3
+* Webpack 4
+* Bootstrap 4
 * BrowserSync with localtunnel, xip.io, ...
 * Hot Module Replacement
 * ES6 Support via [babel-loader](https://github.com/babel/babel-loader)

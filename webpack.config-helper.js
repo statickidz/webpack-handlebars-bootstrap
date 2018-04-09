@@ -97,11 +97,6 @@ module.exports = (options) => {
     webpackConfig.entry = ['./src/app.js'];
 
     webpackConfig.plugins.push(
-      new Webpack.optimize.UglifyJsPlugin({
-        compressor: {
-          warnings: false
-        }
-      }),
       ExtractSASS,
       new CleanWebpackPlugin(['dist'], {
         verbose: true,
