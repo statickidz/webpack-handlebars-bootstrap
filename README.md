@@ -17,7 +17,7 @@ yarn install
 ### BrowserSync Server
 
 ```
-yarn dev
+yarn start
 ```
 
 ### Build Production
