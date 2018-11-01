@@ -1,14 +1,13 @@
 {{#> base }}
 
-    {{> nav about=this }}
+  {{> header about=this }}
 
-    <main role="main" class="container">
+  <main role="main" class="container">
 
-      <div class="starter-template" style="padding: 3rem 1.5rem; text-align: center;">
-        <h1>About Page</h1>
-        <p class="lead">Use this document as a way to quickly start any new project.</p>
-      </div>
+    {{#> welcome title="About Page" }}
+      <p class="lead">Use this document as a way to quickly start any new project.</p>
+    {{/welcome}}
 
-    </main><!-- /.container -->
+  </main>
 
 {{/ base }}

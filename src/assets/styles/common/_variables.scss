@@ -1,0 +1,23 @@
+// Theme
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1080px
+);
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1260px
+);
+$theme-colors: (
+  primary: #E42E68,
+  secondary: #4C5151
+);
+$primary: map-get($map: $theme-colors, $key: "primary");
+$secondary: map-get($map: $theme-colors, $key: "secondary");
+
+// Colors
+$text-color: #4C5151;
