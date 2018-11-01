@@ -7,10 +7,23 @@
  * @see https://github.com/webpack-contrib/sass-loader#imports
  */
 @import "~bootstrap/scss/bootstrap";
+@import "~@fortawesome/fontawesome-free/scss/fontawesome";
+@import "~@fortawesome/fontawesome-free/scss/brands";
+@import "~@fortawesome/fontawesome-free/scss/solid";
+@import "~@fortawesome/fontawesome-free/scss/regular";
 
-/** Import theme styles */
+// Common
 @import "common/global";
+@import "common/mixins";
+@import "common/fonts";
+
+// Layouts
 @import "layouts/header";
 @import "layouts/sidebar";
 @import "layouts/footer";
+
+// Pages
+@import "pages/home";
+
+// Components
 @import "components/welcome";
