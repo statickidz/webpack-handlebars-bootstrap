@@ -6,6 +6,8 @@
 
 A clean Webpack, Bootstrap and Handlebars frontend template.
 
+![Webpack 4 + Bootstrap 4 + Handlebars](src/assets/images/screenshot.png?raw=true)
+
 ### Installation
 
 ```
@@ -31,6 +33,7 @@ yarn build
 * SEO friendly
 * Webpack 4
 * Bootstrap 4
+* FontAwesome 5
 * BrowserSync with localtunnel, xip.io, ...
 * Hot Module Replacement
 * ES6 Support via [babel-loader](https://github.com/babel/babel-loader)
