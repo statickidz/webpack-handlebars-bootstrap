@@ -60,7 +60,7 @@ module.exports = (options) => {
         {
           test: /\.js$/,
           exclude: /node_modules/,
-          loader: "babel-loader"
+          loader: 'babel-loader'
         },
         {
           test: /\.hbs$/,
@@ -88,7 +88,11 @@ module.exports = (options) => {
         },
         {
           test: /\.(gif|jpg|png)$/,
-          loader: "file-loader",
+          loader: 'file-loader',
+          options: {
+            name: '[name].[ext]',
+            outputPath: './assets/images'
+          }
         }
       ]
     }
@@ -152,7 +156,7 @@ module.exports = (options) => {
             '**/*.hbs'
           ],
           fn: function (event, file) {
-            if (event === "change" || event === "add" || event === "unlink") {
+            if (event === 'change' || event === 'add' || event === 'unlink') {
               const bs = require('browser-sync').get('bs-webpack-plugin');
               bs.reload();
             }
