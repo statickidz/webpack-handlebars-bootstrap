@@ -1,5 +1,6 @@
 .npm
 *.log
+yarn.lock
 npm-debug.log*
 dist
 node_modules
