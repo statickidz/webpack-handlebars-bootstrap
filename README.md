@@ -4,9 +4,12 @@
 
 # Webpack 4 + Bootstrap 4 + Handlebars
 
-A clean Webpack, Bootstrap and Handlebars frontend template.
+A clean and light Webpack, Bootstrap and Handlebars frontend template.
 
 ![Webpack 4 + Bootstrap 4 + Handlebars](src/assets/images/screenshot.png?raw=true)
+
+### Demo
+[https://webpack-handlebars-bootstrap.netlify.com/](https://webpack-handlebars-bootstrap.netlify.com/)
 
 ### Installation
 
@@ -27,6 +30,12 @@ yarn start
 ```
 yarn build
 ```
+
+### Netlify Deploy Build settings
+
+* Add your repository normally
+* Build command: webpack --config webpack-prod.config.js --colors --optimize-minimize
+* Publish directory: dist
 
 ### Features:
 
