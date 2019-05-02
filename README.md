@@ -19,7 +19,7 @@ cd your-app-name
 yarn install
 ```
 
-### BrowserSync Server
+### Run development
 
 ```
 yarn start
