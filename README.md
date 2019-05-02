@@ -4,7 +4,7 @@
 
 # Webpack 4 + Bootstrap 4 + Handlebars
 
-A clean and light Webpack, Bootstrap and Handlebars frontend template.
+Static site generator built with Webpack, Bootstrap and Handlebars.
 
 ![Webpack 4 + Bootstrap 4 + Handlebars](src/assets/images/screenshot.png?raw=true)
 
@@ -25,7 +25,7 @@ yarn install
 yarn start
 ```
 
-### Build Production
+### Build Static site for production
 
 ```
 yarn build
@@ -39,6 +39,7 @@ yarn build
 
 ### Features:
 
+* Static-site
 * SEO friendly
 * Webpack 4
 * Bootstrap 4
